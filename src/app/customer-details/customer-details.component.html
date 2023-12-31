@@ -1,0 +1,33 @@
+<form class="customer-details-form" [formGroup]="customerDetailsForm">
+  <h2 class="form-section">Please Enter Details</h2>
+  <div class="input-group">
+    <input type="text" id="Name" name="Name" formControlName="Name" required placeholder="First Name" />
+  </div>
+  <div class="input-group">
+    <select id="country" name="country" formControlName="country" required>
+      <option>---Select Country---</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+    </select>
+    <input type="text" id="city" name="city" formControlName="city" required placeholder="City" />
+    <input type="text" id="Zip" name="Zip" formControlName="Zip" required placeholder="Zip Code" />
+  </div>
+  <div class="input-group">
+    <input type="text" id="Address" name="Address" formControlName="Address" required placeholder="Full Address" />
+  </div>
+  <div class="input-group">
+    <input type="text" id="companyemail" name="email" formControlName="email" placeholder="Email" required />
+    <div *ngIf="customerDetailsForm.get('email')?.invalid && (customerDetailsForm.get('email')?.dirty || customerDetailsForm.get('email')?.touched)" class="error">
+  <div *ngIf="customerDetailsForm.get('email')?.hasError('required')">Email is required.</div>
+  <div *ngIf="customerDetailsForm.get('email')?.hasError('email')">Invalid email format.</div>
+</div>
+    <input type="text" id="contact" name="contact" formControlName="contact" required placeholder="Contact" />
+  </div>
+  <h2 class="form-section">Order Summary</h2>
+  <app-order-details-table [orderDetails]="orderDetails" [amountDetails]="amountDetails"></app-order-details-table>
+  <button type="button" (click)="continueWithPayment()" class="continue-button">Continue</button>
+<div class="outer-div">
+  <div *ngIf="showPayPalButton" #paymentRef class="paypal-button-container"></div>
+</div>
+</form>
+<div class="loading-spinner" *ngIf="loading"></div>

@@ -1,0 +1,30 @@
+<!-- license-purchase.component.html -->
+<div class="license-box">
+  <h2 class="inner-headlines">PC Count</h2>
+  <h5 class="inner-headlines">*Annual fees apply</h5>
+  <div class="download-button">
+    <a [href]="fileUrl" class="link-down" download="Midwest.accdb">Download Trial Version</a>
+  </div>
+  
+  <h3 class="inner-headlines">Select number of licenses</h3>
+  <div class="unit-counter">
+    <button (click)="decreaseUnits()">-</button>
+    <span>{{ units }}</span>
+    <button (click)="increaseUnits()">+</button>
+  </div>
+  <!-- Total amount -->
+  <table>
+    <tr class="total-amount">
+      <td class="amount">Subtotal:</td>
+      <td class="amount">${{ totalAmount }}/Yr</td>
+    </tr>
+  </table>
+</div>
+<div class="detailed-box">
+  <app-order-details-table
+    [orderDetails]="orderDetails"
+    [amountDetails]="amountDetails"
+  ></app-order-details-table>
+  <button (click)="proceedToCheckout()" [disabled]="totalAmount <= 0">
+    Proceed to Pay  </button>
+</div>

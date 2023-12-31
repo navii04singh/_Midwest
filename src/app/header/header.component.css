@@ -1,0 +1,170 @@
+/* styles.css */
+/* @import '~@fortawesome/fontawesome-free/css/all.css'; */
+/* header.component.css */
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+nav {
+  background-color: #ffffff;
+  /* padding: 5px; */
+  box-shadow: 0 15px 30px #c5f3f3;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.button-contact {
+  font-size: 14px;
+  background-color: #06104e;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 6px 10px 6px 10px !important;
+  transition: all 0.5s;
+  color: white;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-right: 40px;
+  word-spacing: 2px;
+}
+
+.button-contact:hover {
+  background-color: #0b3e20;
+  visibility: inherit;
+  opacity: 0.85;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-home {
+  padding: 7px 0px 0px 7px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 82px;
+  margin-left: 34px;
+}
+
+.container {
+  text-align: left;
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.top-header {
+  background-color: #076b90 !important;
+  font-size: 14px;
+  /* line-height: 2.6em; */
+  z-index: 100000;
+  color: #ffffff;
+}
+
+.contact-num {
+  margin-left: 30px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-num,
+.contact-email {
+  display: inline-block;
+  margin-right: 20px;
+  color: #ffffff; /* Default color for the contact links */
+}
+
+.contact-icon {
+  margin-right: 5px; /* Add some spacing between the icon and the text */
+}
+.color-text {
+  font-family: Open Sans, Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Style the link on hover */
+.contact-num a:hover,
+.contact-email a:hover {
+  color: #bbbbbb; /* Blue color on hover */
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding-top: 0;
+  }
+}
+
+/* home.component */
+
+/* home.component.css */
+/* .nav-2 {
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */
+
+.main-header-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #06104e;
+  margin-top: 1px;
+}
+
+.main-header:hover {
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions on hover */
+}
+
+.tab-button.active {
+  border-color: #c5f3f3; /* Blue border for the active tab button */
+}
+
+.tab-button {
+  display: block;
+  padding: 6px 28px;
+  color: #fff; /* White color for button text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid transparent; /* Transparent border initially */
+
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions on hover */
+}
+
+.tab-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Slightly transparent background on hover */
+  border-color: #cecece; /* White border on hover */
+}

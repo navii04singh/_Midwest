@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.css */
+/* styles.css */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+body{
+    font-family: Open Sans,Arial,sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    line-height: 1em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}

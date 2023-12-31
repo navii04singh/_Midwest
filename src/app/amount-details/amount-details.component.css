@@ -1,0 +1,22 @@
+/* Update table styles to look like a traditional table */
+.order-details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-header {
+    background-color: #06104e;
+    color: white;
+  }
+  
+  .table-header th,
+  .table-values td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    height: 30px; /* Add a fixed height for the table rows */
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
+  }
+  
+  .table-values tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

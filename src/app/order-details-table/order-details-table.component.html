@@ -1,0 +1,37 @@
+<table class="order-details-table">
+  <div class="data-row">
+    <tr class="table-header">
+      <th>Versions</th>  
+      <th>Product Name</th>
+      <th>Count</th>
+      <th>Price($) Per Unit</th>
+    </tr>
+    <tr *ngIf="orderDetails.length === 0" class="table-values">
+      <td>Standard</td>
+      <td>New License for PCs</td>
+      <td>0</td>
+      <td>$750</td>
+    </tr>
+    <tr *ngFor="let orderDetail of orderDetails" class="table-values">
+      <td>{{ orderDetail.version }}</td>
+      <td>{{ orderDetail.productName }}</td>
+      <td>{{ orderDetail.count }}</td>
+      <td>${{ orderDetail.price }}</td>
+    </tr>
+  </div>
+  <div class="data-row">
+    <tr class="table-header">
+      <th>License Type</th>
+      <th>Total amount</th>
+    </tr>
+    <tr *ngIf="amountDetails.length === 0" class="table-values">
+      <td>New</td>
+      <td style="color: red;">$0</td>
+    </tr>
+    <tr *ngFor="let amountDetail of amountDetails" class="table-values">
+      <td>New</td>
+      <td style="color: red; font-weight: bold; font-size: large;">${{ amountDetail.TotalPCsamount }}</td>
+    </tr>
+  </div>
+  
+</table>
